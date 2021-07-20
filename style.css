@@ -1,0 +1,100 @@
+*{
+    font-family: sans-serif;
+}
+body, html{
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: rgba(190, 163, 224, 0.52);
+    color: white;
+}
+body{
+    padding: 0 5px 5px 5px;
+}
+
+.title{
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white
+}
+.title img{
+    height: 7rem;
+}
+.main{
+    display: flex;
+    gap: 12px;
+}
+.column{
+    flex: 1;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-around;
+    transition: all .5s;
+    box-shadow: 5px 5px 10px black,
+    inset 0px 0px 5px black;
+    background-color: rgb(229, 200, 255);
+}
+.main div h3{
+    font-size: 2.5rem;
+    justify-self: flex-start;
+    margin: 0;
+    transition: all .5s;
+}
+.column:hover h3{
+    font-size: 3.5rem;
+}
+
+.column:hover{
+    flex:3;
+}
+.column:hover label{
+    font-size: 2rem!important;
+}
+
+label{
+    font-size: 1.8rem;
+    text-align: left;
+    transition: all .5s;
+    display: block;
+}
+.main:hover .column label{
+    font-size: 1.3rem;
+}
+.form{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.input{
+    width: 20px;
+    font-size: inherit;
+    margin: 5px;
+    transition: all .5s;
+}
+.input:focus{
+    outline: none;
+}
+.column:hover .input{
+    width: 60px;
+}
+.button{
+    display: block;
+    transition: 200ms;
+    padding: 3px;
+    margin-top: 5px;
+}
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 4, 242, 0.596);
+
+}
+.button:active{
+    transform: translateY(1px);
+}
