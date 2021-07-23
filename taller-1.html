@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con JavaScript</title>
+    <link rel="stylesheet" href="/css/geometry.css">
+    <script src="/scripts/triangle.js"></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Calcula tus figuras geometricas</h1>
+        <img src="/img/face-with-monocle_1f9d0.png" alt="" class="carita">
+    </div>
+    <div class="main">
+        <div class="column">
+            <div class="column-title"><h3>Cuadrado</h3><img src="/img/check-box.png" class="icon" alt=""></div>
+            <form class="form">
+                <label>Introduzca un lado de tu cuadrado: <input type="number" id="ladocuadrado" class="input">cm</label>
+                <div class="form-buttons">
+                    <input type="button" onclick="perimetroCuadrado()" value="Calcular perimetro" id="botonCuadrado" class="button">
+                    <input type="button" onclick="areaCuadrado()" value="Calcular area" id="botonCuadrado" class="button">
+                </div>
+            </form>
+            <div class="resultadosCuadrado">
+                <label id="resultadoCuadrado">El perimetro de tu cuadrado es de 45cm</label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-title"><h3>Triangulo</h3><img class="icon" src="/img/triangle.png"></div>
+            <form class="form">
+                <label>Introduzca la base de tu triangulo: <input type="number" class="input" id="basetriangulo">cm</label>
+                <label>Introduzca lado A de tu triangulo: <input type="number" class="input" id="ladoatriangulo">cm</label>
+                <label>Introduzca lado B de tu triangulo: <input type="number" class="input" id="ladobtriangulo">cm</label>
+                <div class="form-buttons">
+                    <input type="button" onclick="perimetroTriangulo()" value="Calcular perimetro" class="button">
+                    <input type="button" onclick="areaTriangulo()" value="Calcular area" class="button">
+                    <input type="button" onclick="alturaTriangulo()" value="Calcular altura" class="button">
+                </div>
+            </form>
+            <div class="resultadosTriangulo">
+                <label id="resultadoTriangulo">El perimetro de tu triangulo es de 45cm</label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-title"><h3>Circulo</h3><img src="/img/circle.png" class="icon" alt=""></div>
+            <form class="form">
+                <label>Introduzca el radio de su circulo: <input type="number" class="input" id="radioCirculo"></label>
+                <input type="button" value="Calcular" id="botonCirculo" class="button">
+            </form>
+            <div>
+                <label>El diametro de tu circulo es de: <input type="text" id="diametrocirculo" class="input" readonly></label>
+                <label>La circunferencia de tu circulo es de: <input type="text" id="circunferenciacirculo" class="input" readonly></label>
+                <label>El area de tu circulo es de: <input type="text" id="areacirculo" readonly class="input"></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/square.js"></script>
+    <script src="/scripts/circle.js"></script>
+</body>
+</html>

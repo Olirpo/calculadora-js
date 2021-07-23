@@ -1,0 +1,143 @@
+*{
+    font-family: sans-serif;
+}
+body, html{
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: rgba(190, 163, 224, 0.52);
+    color: white;
+}
+body{
+    padding: 0 5px 5px 5px;
+}
+
+.title{
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+}
+.title img{
+    height: 7rem;
+}
+.main{
+    display: flex;
+    gap: 1rem;
+    
+}
+.column{
+    flex:1;
+    height: 450px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-around;
+    transition: all .5s;
+    box-shadow: 5px 5px 10px black,
+    inset 0px 0px 5px black;
+    background-color: rgb(229, 200, 255);
+}
+.column-title{
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    transition: all .5s;
+}
+.column:hover .column-title, .column:hover .icon, .column:focus-within .column-title, .column:focus-within .icon{
+    font-size: 3.5rem;
+    height: 5rem;
+}
+
+.icon{
+    height: 4rem;
+    transition: all .5s;
+    margin-left: 1rem;
+}
+.column:hover, .column:focus-within{
+    flex:3;
+}
+.column:hover label, .column:focus-within label{
+    font-size: 2rem!important;
+}
+
+label{
+    font-size: 1.8rem;
+    text-align: left;
+    transition: all .5s;
+    display: block;
+}
+.column:hover ~ label, .column:focus-within ~ div label{
+    font-size: 1.3rem;
+}
+.form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.input{
+    width: 20px;
+    font-size: inherit;
+    margin: 5px;
+    transition: all .5s;
+}
+.input:focus{
+    outline: none;
+}
+.column:hover .input, .column:focus-within .input{
+    width: 60px;
+}
+.form-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: .6rem;
+    margin-top: 2.4rem;
+}
+.button{
+    display: block;
+    transition: 200ms;
+    padding: .5rem;
+    flex: 1;
+}
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 4, 242, 0.596);
+
+}
+.button:active{
+    transform: translateY(1px);
+}
+@media only screen and (max-width: 600px){
+    .main{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+    .column{
+        width: 85vw;
+        margin: 10px;
+    }
+    .column:hover{
+        flex:1;
+    }
+    .column:hover .column-title, .column:hover .icon{
+        font-size: 2.5rem;
+        height: 4rem;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
