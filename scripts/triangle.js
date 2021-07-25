@@ -15,4 +15,5 @@ class Triangulo{
     perimetro(){
         return this.base + this.ladoA + this.ladoB
     }
+    
 }

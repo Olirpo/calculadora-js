@@ -47,12 +47,14 @@
             <div class="column-title"><h3>Circulo</h3><img src="/img/circle.png" class="icon" alt=""></div>
             <form class="form">
                 <label>Introduzca el radio de su circulo: <input type="number" class="input" id="radioCirculo"></label>
-                <input type="button" value="Calcular" id="botonCirculo" class="button">
+                <div class="form-buttons">
+                    <input type="button" value="Calcular perimetro" class="button" onclick="perimetroCirculo()">
+                    <input type="button" value="Calcular diametro" class="button" onclick="diametroCirculo()">
+                    <input type="button" value="Calcular area" class="button" onclick="areaCirculo()">
+                </div>
             </form>
             <div>
                 <label>El diametro de tu circulo es de: <input type="text" id="diametrocirculo" class="input" readonly></label>
-                <label>La circunferencia de tu circulo es de: <input type="text" id="circunferenciacirculo" class="input" readonly></label>
-                <label>El area de tu circulo es de: <input type="text" id="areacirculo" readonly class="input"></label>
             </div>
         </div>
     </div>
