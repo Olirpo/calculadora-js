@@ -1,7 +1,7 @@
 ///////// DOM MANIPULATION CONSTS //////////////
 const respuestaCuadrado = document.getElementById('resultadoCuadrado');
 const resultadoTriangulo = document.getElementById('resultadoTriangulo');
-
+const resultadoCirculo = document.getElementById('resultadoCirculo');
 
 //////// SQUARE FUNCTIONS //////////
 const perimetroCuadrado = ()=>{
@@ -65,18 +65,34 @@ const alturaTriangulo = () =>{
                                     <strong style="color:black">${altura}cm</strong>`;
 }
 }
-const resultadoCirculo = document.getElementById('diametrocirculo');
 
-
-document.getElementById('botonCirculo').addEventListener('click', ()=>{
-    const radioCirculo = parseFloat(document.getElementById('radioCirculo').value);
-    if(radioCirculo>0){
-        return diametroCirculo.value = (radioCirculo*2).toFixed(2),
-        circunferenciaCirculo.value = (diametroCirculo.value * Math.PI).toFixed(2),
-        areaCirculo.value = (Math.PI * radioCirculo**2).toFixed(2);
+const perimetroCirculo = ()=>{
+    let radio = parseFloat(document.getElementById("radioCirculo").value);
+    if (radio>0){
+        let perimetro = (radio*2)*Math.PI;
+        resultadoCirculo.innerHTML = `El perimetro de tu circulo es de <strong style="color:black"> ${perimetro.toFixed(2)}cm</strong>`
     }
-    return diametroCirculo.value = "ERR INTRODUZCA LOS NUMEROS CORRECTAMENTE",
-        circunferenciaCirculo.value = "ERR INTRODUZCA LOS NUMEROS CORRECTAMENTE",
-        areaCirculo.value = "ERR INTRODUZCA LOS NUMEROS CORRECTAMENTE";
-
-});
+    else{
+        alert('Introduzca un valor correcto por favor');
+    }
+}
+const diametrocirculo = ()=>{
+    let radio = parseFloat(document.getElementById("radioCirculo").value);
+    if (radio>0){
+        let diametro = (radio*2);
+        resultadoCirculo.innerHTML = `El diametro de tu circulo es de <strong style="color:black"> ${diametro.toFixed(2)}cm</strong>`
+    }
+    else{
+        alert('Introduzca un valor correcto por favor')
+    }
+}
+const areaCiruclo = ()=>{
+    let radio = parseFloat(document.getElementById("radioCirculo").value);
+    if (radio>0){
+        let areaCiruclo = Math.PI*radio**2
+        resultadoCirculo.innerHTML = `El area de tu circulo es de <strong style="color:black"> ${diametro.toFixed(2)}cm²</strong>`
+    }
+    else{
+        alert('Introduzca un valor correcto por favor')
+    }
+}
