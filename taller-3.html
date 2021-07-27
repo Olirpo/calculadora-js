@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3 - Media, moda y mediana</title>
+</head>
+<body>
+    <main>
+        <div class="title"><h1>Calcular media, moda y mediana</h1></div>
+        <div class="root">
+            <h2 class="title">Bienvenido a la calculadora de medias</h2>
+        <form action="">
+            <label for="">Por favor, ingrese <strong>UNO POR UNO</strong> los datos de los cuales desea calcular la media aritmetica
+                     <input id="inputNumbers"type="number"></label>
+                     <input type="button" onclick="addValue()"value="Agregar nuevo valor">
+            <div class="buttons">
+                
+                <input type="button" onclick="printResult()" value="Calcular media aritmetica">
+                <input type="button" onclick="cleanList()" value="Borrar todos los valores">
+            </div>
+        </form>
+        <h2>Su lista se vera reflejada aqui:</h2>
+        <div style="display: flex; align-items: center;">[<p id="listaHTML"></p>]</div>
+        <p id="resultadoPromedio"></p>
+        </div>
+    </main>
+    <script src="./scripts/taller-3.js"></script>
+</body>
+</html>
