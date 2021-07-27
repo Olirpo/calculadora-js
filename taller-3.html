@@ -8,24 +8,39 @@
 </head>
 <body>
     <main>
-        <div class="title"><h1>Calcular media, moda y mediana</h1></div>
+        <div class="title">
+            <h1>Calcular media, moda y mediana</h1>
+        </div>
+        <div class="form-chooser">
+            <form action="">
+                <label for="">Seleccione que desea calcular: 
+                    <select name="figure" id="form-chooser__selector" class="form-chooser__selector">
+                        <option disabled selected>Seleccione una opción</option>
+                        <option value="mediana">Media</option>
+                        <option value="mediana">Mediana</option>
+                        <option value="moda">Moda</option>
+                    </select>
+                </label>
+            </form>
+        </div>
         <div class="root">
             <h2 class="title">Bienvenido a la calculadora de medias</h2>
-        <form action="">
-            <label for="">Por favor, ingrese <strong>UNO POR UNO</strong> los datos de los cuales desea calcular la media aritmetica
-                     <input id="inputNumbers"type="number"></label>
-                     <input type="button" onclick="addValue()"value="Agregar nuevo valor">
-            <div class="buttons">
-                
-                <input type="button" onclick="printResult()" value="Calcular media aritmetica">
-                <input type="button" onclick="cleanList()" value="Borrar todos los valores">
-            </div>
-        </form>
-        <h2>Su lista se vera reflejada aqui:</h2>
-        <div style="display: flex; align-items: center;">[<p id="listaHTML"></p>]</div>
-        <p id="resultadoPromedio"></p>
+            <form action="">
+                <label for="">Por favor, ingrese <strong>UNO POR UNO</strong> los datos de los cuales desea calcular la media aritmetica
+                         <input id="inputNumbers"type="number"></label>
+                         <input type="button" onclick="addValue()"value="Agregar nuevo valor">
+                <div class="buttons">
+                    
+                    <input type="button" onclick="printResult()" value="Calcular media aritmetica">
+                    <input type="button" onclick="cleanList()" value="Borrar todos los valores">
+                </div>
+            </form>
+            <h2>Su lista se vera reflejada aqui:</h2>
+            <div style="display: flex; align-items: center;">[<p id="listaHTML"></p>]</div>
+            <p id="resultadoPromedio"></p>
         </div>
     </main>
     <script src="./scripts/taller-3.js"></script>
+    <script src="./scripts/mediana.js"></script>
 </body>
 </html>
