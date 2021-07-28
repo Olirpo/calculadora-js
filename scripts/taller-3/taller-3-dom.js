@@ -1,13 +1,13 @@
 //@ts-check
-
+// DOM ELEMENTS TO MODIFY
 const selectionInput = document.getElementById('form-chooser__selector');
-const options ={
-    1:'media',
-    2:'mediana',
-    3:'moda'
-}
+const root = document.getElementById('root');
+
+
 selectionInput.addEventListener('change',(e)=>{
+    // @ts-ignore
+    
     const choiceIndex = selectionInput.selectedIndex;
     const choice = options[choiceIndex];
-    console.log(choice)
+    root.innerHTML = choice
 });
