@@ -1,15 +1,26 @@
 var lista = [];
 
 const printMedia = ()=>{
-    const resultadoPromedio = document.getElementById('resultadoPromedio');
+    const resultadoHTML = document.getElementById('resultado');
     if(lista[0]==undefined){
         alert('Debe introducir valores en su lista')
         return
     }
     let promedio = calcularMedia(lista);
     let promedioFixed = promedio.toFixed(2)
-    resultadoPromedio.innerHTML = `El promedio de tu lista de valores es de <strong>${promedioFixed}</strong>`
+    resultadoHTML.innerHTML = `El promedio de tu lista de valores es de <strong>${promedioFixed}</strong>`
 }   
+const printMediana = ()=>{
+    const resultadoHTML = document.getElementById('resultado');
+    if(lista[0]==undefined){
+        alert('Debe introducir valores en su lista')
+        return
+    }
+    let mediana = calcularMediana(lista)
+    resultadoHTML.innerHTML= `La mediana de su lista ingresada es <strong>${mediana}</strong>`
+
+}
+
 const addValue = ()=>{
     const listaHTML = document.getElementById('listaHTML');
     const inputNumber = document.getElementById('inputNumbers');
@@ -37,7 +48,7 @@ const addValue = ()=>{
 const cleanList = ()=>{
     listaHTML.innerHTML = '';
     lista = [];
-    resultadoPromedio.innerHTML = ''
+    resultadoHTML.innerHTML = ''
 }
 
 const calcularMedia = (array)=>{
@@ -48,15 +59,32 @@ const calcularMedia = (array)=>{
 const calcularMediana = (array) => {
     let length = array.length;
     let middleLength = length/2
+    let orderedArray = orderArray(array)
     if(isPair(length)){
-        let half1 = array[middleLength];
-        let half2 = array[middleLength+1]
+        let half1 = orderedArray[middleLength-1]; // IAM RESTING ONE COZ THE INDEX 0 IS NOT CONTEMPLATED
+        let half2 = orderedArray[middleLength]
         let mediana = calcularMedia([half1,half2]);
         return mediana
     }
-    let ceiledMiddle = Math.ceil(middleLength);
-    let mediana = array[ceiledMiddle]
+    let ceiledMiddle = Math.floor(middleLength);
+    let mediana = orderedArray[ceiledMiddle]
+    return mediana
 }
 function isPair(num){
     return num % 2 === 0 
+}
+function orderArray(array) {
+    return array.sort((a,b)=>a-b)
+}
+function objectModa(array){
+    let object = {};
+    array.map(e=>{
+        if(object[e]){
+            object[e] +=1
+        }
+        else{
+            object[e] = 1
+        }
+        
+    })
 }
